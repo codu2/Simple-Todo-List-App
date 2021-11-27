@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-height: 600px;
+  width: 400px;
+  color: #efe8dc;
+  background-color: #4d511f;
+  border-radius: 1.5rem;
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+  font-size: 14px;
+}
