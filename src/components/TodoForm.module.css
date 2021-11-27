@@ -15,6 +15,11 @@
   background-color: transparent;
 }
 
+.todo-input.edit {
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+
 .todo-button {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -25,6 +30,11 @@
   color: #efe8dc;
   background-color: #4d511f;
   cursor: pointer;
+}
+
+.todo-button.edit {
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
 }
 
 .todo-button:hover {
