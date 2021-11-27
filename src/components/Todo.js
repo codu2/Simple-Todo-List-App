@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './Todo.css';
 import TodoForm from './TodoForm';
 import { RiDeleteBin7Line } from 'react-icons/ri';
-import { AiOutlineEdit } from 'react-icons/ai';
+import { FiEdit2 } from 'react-icons/fi';
 
 const Todo = props => {
     const [edit, setEdit] = useState({
@@ -35,7 +35,7 @@ const Todo = props => {
                         onClick={() => props.removeTodo(todo.id)}    
                         className="delete-icon"
                     />
-                    <AiOutlineEdit
+                    <FiEdit2
                         onClick={() => setEdit({id: todo.id, value: todo.text})}
                         className="edit-icon" 
                     />
