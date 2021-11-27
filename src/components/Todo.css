@@ -1,5 +1,5 @@
 .todo-row {
-  border: 1px solid #efe8dc;
+  border: none;
   width: 90%;
   margin: auto;
   background-color: #efe8dc;
@@ -13,7 +13,7 @@
 }
 
 .complete {
-  background-color: rgba(239, 232, 220, 0.5);
+  opacity: 0.6;
 }
 
 .delete-icon,
