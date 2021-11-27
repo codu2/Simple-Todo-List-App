@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import classes from './TodoForm.module.css';
+import './TodoForm.css';
 
 const TodoForm = props => {
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
     const inputRef = useRef(null);
 
@@ -27,17 +27,36 @@ const TodoForm = props => {
     }
 
     return (
-        <form className={classes['todo-form']} onSubmit={submitHandler}>
-            <input 
-                type="text" 
-                placeholder="Add a todo" 
-                value={input} 
-                name="text" 
-                className={classes['todo-input']}
-                onChange={changeHandler}
-                ref={inputRef}
-            />
-            <button className={classes['todo-button']}>Add</button>
+        <form className="todo-form" onSubmit={submitHandler}>
+            {props.edit ? (
+            <>
+                <input 
+                    type="text" 
+                    placeholder="Update your item" 
+                    value={input} 
+                    name="text" 
+                    className='todo-input edit'
+                    onChange={changeHandler}
+                    ref={inputRef}
+                    autoComplete="off"
+                />
+                <button className='todo-button edit'>Update</button>
+            </>
+            ) : (
+            <>
+                <input 
+                    type="text" 
+                    placeholder="Add a todo" 
+                    value={input} 
+                    name="text" 
+                    className='todo-input'
+                    onChange={changeHandler}
+                    ref={inputRef}
+                    autoComplete="off"
+                />
+                <button className='todo-button'>Add</button>
+            </>
+            )}
         </form>
     )
 };
